@@ -15,7 +15,7 @@ function calculate () {
   const height = parseInt(document.getElementById('height-length').value)
 
   // process
-  const area = [(aLength+bLength)/2] * 2
+  const area = (aLength+bLength)* 2 / 2
 
   // output
   document.getElementById('area').innerHTML = 'Area is: ' + area + ' mm²'
