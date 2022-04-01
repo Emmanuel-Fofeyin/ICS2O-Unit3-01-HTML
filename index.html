@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-light_green.min.css" />    
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-light_green.min.css" />    
     <link rel="stylesheet" href="./css/style.css" />
     <title>Area and Perimeter, with JavaScript</title>
   </head>
@@ -21,46 +21,60 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Area of a Rhombus JS</span>
+          <span class="mdl-layout-title">Area of a Trapozoid, with JS</span>
         </div>
       </header>
       <main class="mdl-layout__content">
         <table>
           <tr>
             <th>
-              <img src="./images/rhombus.png" alt="triangle" width="75%" height="auto" />
+              <img src="./images/trapozoid.png" alt="triangle" width="75%" height="auto" />
             </th>
             <th>
               <h2>Formula</h2>
-              <h3>A = P x Q ÷ 2</h3>
+              <h3>A = [(a+b)/2] x 2</h3>
             </th>
           </tr>
         </table>
         <!-- Simple Textfield -->
         <form action="#">
-          <p>P (vertical)</p>
+          <p>A:Base</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="vertical-length"
+              id="a-length"
             />
-            <label class="mdl-textfield__label" for="vertical-length">vertical length...</label>
+            <label class="mdl-textfield__label" for="a-length">a...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>B:Base</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="b-length"
+            />
+            <label class="mdl-textfield__label" for="b-length">b...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
         <!-- Numeric Textfield -->
         <form action="#">
-          <p>Q (horizontal)</p>
+          <p>height</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="horizontal-length"
+              id="height-length"
             />
-            <label class="mdl-textfield__label" for="horizontal-length">horizontal length...</label>
+            <label class="mdl-textfield__label" for="height-length">height...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
@@ -69,7 +83,7 @@
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="calculate()"
         >
-          Calculate
+          Calculate (area)
         </button>
         <br />
         <p>

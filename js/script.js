@@ -10,12 +10,13 @@
  */
 function calculate () {
   // input
-  const verticalLength = parseInt(document.getElementById('vertical-length').value)
-  const horizontalLength = parseInt(document.getElementById('horizontal-length').value)
+  const aLength = parseInt(document.getElementById('a-length').value)
+  const bLength = parseInt(document.getElementById('b-length').value)
+  const height = parseInt(document.getElementById('height-length').value)
 
   // process
-  const area = (verticalLength * horizontalLength) / 2
+  const area = [(aLength+bLength)/2] * 2
 
   // output
-  document.getElementById('area').innerHTML = 'Area is: ' + area + ' cm²'
+  document.getElementById('area').innerHTML = 'Area is: ' + area + ' mm²'
 }
