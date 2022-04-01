@@ -6,16 +6,16 @@
 
 'use strict'
 /**
- * This function calculates area of trapozoid.
+ * This function calculates area of trapezoid.
  */
 function calculate () {
   // input
   const aLength = parseInt(document.getElementById('a-length').value)
   const bLength = parseInt(document.getElementById('b-length').value)
-  const height = parseInt(document.getElementById('height-length').value)
+  const hLength = parseInt(document.getElementById('h-length').value)
 
   // process
-  const area = (aLength+bLength)* 2 / 2
+  const area = (aLength+bLength) / 2 * hLength
 
   // output
   document.getElementById('area').innerHTML = 'Area is: ' + area + ' mm²'
